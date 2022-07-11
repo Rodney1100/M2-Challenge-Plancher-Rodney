@@ -2,14 +2,14 @@ package com.comapny.MonthConverter.model;
 
 public class Month {
     //    vars for the months return
-    private int monthNum;
-    private String monthName;
+    private int number;
+    private String name;
 
     //    generated constructor
 
-    public Month(int monthNum, String monthName) {
-        this.monthNum = monthNum;
-        this.monthName = monthName;
+    public Month(int number, String name) {
+        this.number = number;
+        this.name = name;
     }
 
     //    general
@@ -18,20 +18,20 @@ public class Month {
 
 //    generated getter and setter below
 
-    public int getMonthNum() {
-        return monthNum;
+    public int getNumber() {
+        return number;
     }
 
-    public void setMonthNum(int monthNum) {
-        this.monthNum = monthNum;
+    public void setNumber(int number) {
+        this.number = number;
     }
 
-    public String getMonthName() {
-        return monthName;
+    public String getName() {
+        return name;
     }
 
-    public void setMonthName(String monthName) {
-        this.monthName = monthName;
+    public void setName(String name) {
+        this.name = name;
     }
 
 
@@ -40,8 +40,8 @@ public class Month {
     @Override
     public String toString() {
         return "Month{" +
-                "monthNum=" + monthNum +
-                ", monthName='" + monthName + '\'' +
+                "number=" + number +
+                ", name='" + name + '\'' +
                 '}';
     }
 }
