@@ -3,37 +3,38 @@ package com.comapny.MonthConverter.controller;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+import com.comapny.MonthConverter.model.Month;
 
 @RestController
 public class MonthController {
     @RequestMapping(value = "/month/{monthNum}", method = RequestMethod.GET)
     @ResponseStatus(value = HttpStatus.OK)
-    public String getMonth(@PathVariable String monthNum) {
+    public Month getMonth(@PathVariable String monthNum) {
         switch (monthNum) {
             case "1":
-                return "January";
+                return new Month(1, "January");
             case "2":
-                return "Febuary";
+                return new Month(2, "Febuary");
             case "3":
-                return "March";
+                return new Month(3, "March");
             case "4":
-                return "April";
+                return new Month(4, "April");
             case "5":
-                return "May";
+                return new Month(5, "May");
             case "6":
-                return "June";
+                return new Month(6, "June");
             case "7":
-                return "July";
+                return new Month(7, "July");
             case "8":
-                return "August";
+                return new Month(8, "August");
             case "9":
-                return "September";
+                return new Month(9, "September");
             case "10":
-                return "October";
+                return new Month(10, "October");
             case "11":
-                return "November";
+                return new Month(11, "November");
             case "12":
-                return "December";
+                return new Month(12, "December");
             default:
                 throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, "Invalid Month Number Specified");
         }
