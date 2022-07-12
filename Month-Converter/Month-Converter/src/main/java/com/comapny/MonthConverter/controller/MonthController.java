@@ -14,7 +14,7 @@ public class MonthController {
             case "1":
                 return new Month(1, "January");
             case "2":
-                return new Month(2, "Febuary");
+                return new Month(2, "February");
             case "3":
                 return new Month(3, "March");
             case "4":

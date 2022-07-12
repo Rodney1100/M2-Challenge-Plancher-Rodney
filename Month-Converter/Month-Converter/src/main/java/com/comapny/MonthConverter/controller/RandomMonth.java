@@ -17,12 +17,13 @@ public class RandomMonth {
         Random randoNum = new Random();
         int randomNum = 1 + randoNum.nextInt(12);
 //        String returnVal = "return statement";
+
 //        send the month and return nothing
         switch (randomNum) {
             case 1:
                 return new Month(1, "January");
             case 2:
-                return new Month(2, "Febuary");
+                return new Month(2, "February");
             case 3:
                 return new Month(3, "March");
             case 4:
