@@ -10,7 +10,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.Random;
 
 @RestController
-public class RandomMonth {
+public class RandomMonthController {
     @RequestMapping("/randomMonth")
     @ResponseStatus(HttpStatus.OK)
     public Month randomMonth() {
@@ -44,46 +44,8 @@ public class RandomMonth {
                 return new Month(11, "November");
             case 12:
                 return new Month(12, "December");
+            default:
+                throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, "Invalid Month Number was created somehow.");
         }
-//            case 1:
-//                return new Month(1, "January");
-//                break;
-//            case 2:
-//                returnVal = new Month(randomNum,"Febuary");
-//                break;
-//            case 3:
-//                returnVal = new Month(randomNum,"March");
-//                break;
-//            case 4:
-//                returnVal = new Month(randomNum,"April");
-//                break;
-//            case 5:
-//                returnVal = new Month(randomNum,"May");
-//                break;
-//            case 6:
-//                returnVal =new Month(randomNum, "June");
-//                break;
-//            case 7:
-//                returnVal =new Month(randomNum, "July");
-//                break;
-//            case 8:
-//                returnVal = new Month(randomNum,"August");
-//                break;
-//            case 9:
-//                returnVal =new Month(randomNum, "September");
-//                break;
-//            case 10:
-//                returnVal =new Month(randomNum, "October");
-//                break;
-//            case 11:
-//                returnVal =new Month(randomNum, "November");
-//                break;
-//            case 12:
-//                returnVal = new Month(randomNum,"December");
-//                break;
-//        }
-//        return returnVal;
-
-        return null;
     }
 }
